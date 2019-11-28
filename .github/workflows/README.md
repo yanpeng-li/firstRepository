@@ -32,7 +32,7 @@ PUT /ipadic_lyp
 ```
 * *ipadic_lyp* is the name of this index
 * the value of *dynamic* can be true(default), false and strict.   
->ture   : add new fields dynamically
+>ture   : add new fields dynamically  
 >false  : ignore new fields  
 >>strict : throw an exception when a new field appear  
 * 
