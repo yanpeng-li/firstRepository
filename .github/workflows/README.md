@@ -235,4 +235,45 @@ GET /ipadic_lyp/_doc/_search
 The full text queries enable you to search analyzed text fields such as the body of an email. The query string is processed using the same analyzer that was applied to the field during indexing.
 #### Match
 Returns documents that match a provided text, number, date or boolean value. The provided text is analyzed before matching.
+```
+GET /ipadic_lyp/_doc/_search
+{
+  "query":{
+    "match":{
+      "name":{
+        "fuzziness": "AUTO",
+        "query":"Shiede yii",
+        "operator":"or"
+      }
+    }
+  }
+}
+```
+
+#### Mathc_phrase
+The match_phrase query analyzes the text and creates a phrase query out of the analyzed text.
+```
+GET /ipadic_lyp/_doc/_search
+{
+  "query":{
+    "match_phrase":{
+      "name":"Shieda Kayn is"
+    }
+  }
+}
+```
+
+#### Multi_match
+The multi_match query builds on the match query to allow multi-field queries
+```
+{
+  "query":{
+    "multi_match":{
+      "query":"Shieda Kayn top ",
+      "fields": ["name","position"]
+    }
+  }
+}
+```
+
 
