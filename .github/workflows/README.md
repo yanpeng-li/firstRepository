@@ -34,7 +34,7 @@ PUT /ipadic_lyp
 * *ipadic_lyp* is the name of this index
 * the value of *dynamic* can be true(default), false and strict.   
     >ture   : add new fields dynamically  
-    >false  : ignore new fields (can be seen, just cannot be used as search condition) 
+    >false  : ignore new fields (can be seen, just cannot be used as search condition)  
     >strict : throw an exception when a new field appear  
 * the default values of *number_of_shards* and *number_of_replicas* are 5 and 1, which means the index has 5 primary shards and each primary shard has 5 replicas.
 
